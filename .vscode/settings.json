@@ -1,0 +1,6 @@
+{
+  "python.analysis.extraPaths": [
+    "./Grounded-SAM-2",
+    "./Grounded-SAM-2/grounding_dino",
+  ]
+}
