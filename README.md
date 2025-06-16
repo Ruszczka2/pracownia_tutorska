@@ -4,7 +4,7 @@
 
 ## Przed instalacją
 
---- pobranie CUDA, utworznie folderu ---
+--- pobranie CUDA ---
 
 Ustawienie stałej ścieżki do folderu z CUDA
 ```bash
@@ -23,7 +23,8 @@ echo $CUDA_HOME
 
 Pobranie repozytorium
 ```bash
-git clone link_do_tego_repo
+git clone https://github.com/Ruszczka2/pracownia_tutorska.git
+cd pracownia_tutorska
 ```
 
 Zainstalowanie środowiska wirtualnego
@@ -85,12 +86,12 @@ Przykładowa komenda `touch /home/ruszczka/projekty/test_files/Grounded-SAM-2/gr
 ```
 twoj-projekt/
 ├── .venv/                 # Środowisko wirtualne (w .gitignore)
-├── data2/                 # folder z danymi
+├── .vscode/               # Folder z potrzebną konfiguracją VSCode 
+├── data2/                 # Folder z danymi
+├──
+├──
+├──
 ├── requirements.txt       # Lista zależności
-├──
-├──
-├──
-├──
 └── README.md              # Ten plik
 ```
 
