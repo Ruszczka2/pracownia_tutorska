@@ -2,7 +2,7 @@
 
 --- opis ---
 
-## Instalacja CUDA 11.8
+## Instalacja CUDA 12.4
 
 Przy linijce z `cuda-*-keyring.gpg` należy podmienić na kod, który ukaże się podczas instalacji wcześniej
 ```bash
@@ -92,17 +92,19 @@ Instalacja GDINO
 pip install --no-build-isolation -e grounding_dino
 ```
 
-<!-- Dodanie Grounded-SAM-2 do ścieżki python
+<!-- Chyba sys sobie daje rade - sprawdzic
+Dodanie Grounded-SAM-2 do ścieżki python
 ```bash
 echo "export PYTHONPATH=\$PYTHONPATH:/pełna/ścieżka/do/Grounded-SAM-2/sam2:/pełna/ścieżka/do/Grounded-SAM-2/grounding_dino" >> ~/.bashrc
 source ~/.bashrc
 ```
 przykładowo `echo "export PYTHONPATH=\$PYTHONPATH:/home/ruszczka/projekty/test_files/Grounded-SAM-2/sam2:/home/ruszczka/projekty/test_files/Grounded-SAM-2/grounding_dino" >> ~/.bashrc` -->
 
+<!-- Działa na razie bez tego
 Dodanie pliku `__init__.py` do poprawnego działania
 ```bash
 touch /pełna/ścieżka/do/Grounded-SAM-2/grounding_dino/__init__.py
-```
+``` -->
 Przykładowa komenda `touch /home/ruszczka/projekty/test_files/Grounded-SAM-2/grounding_dino/__init__.py`
 
 ## Struktura projektu
@@ -125,4 +127,4 @@ twoj-projekt/
 - [ ] Uzupełnić strukturę projektu
 - [ ] Uzupełnić nagłówek *Przed instalacją*
 - [x] Sprawdzenie listy ToDo
-- [ ] Upewnić się czy trzeba pobrać dodatkowo python 3.10
+- [x] Upewnić się czy trzeba pobrać dodatkowo python 3.10 - stabilnie
