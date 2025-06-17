@@ -10,3 +10,6 @@ addict
 yapf
 timm
 pycocotools
+scikit-learn
+tqdm
+tensorflow[and-cuda]

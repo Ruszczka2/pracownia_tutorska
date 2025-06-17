@@ -1,2 +1,5 @@
 .venv/
 Grounded-SAM-2/
+outputs/*
+!outputs/.gitkeep
+!outputs/model/.gitkeep
