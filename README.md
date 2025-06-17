@@ -40,8 +40,6 @@ pyenv install 3.10.13
 pyenv local 3.10.13
 ``` -->
 
-!! Sprawdzić czy nie trzeba pobrać python 3.10 przed !!
-
 ## Instalacja
 
 Pobranie repozytorium
@@ -58,8 +56,8 @@ source .venv/bin/activate
 
 Zainstalowanie potrzebnych pakietów
 ```bash
-pip3 install --upgrade pip
-pip3 install -r requirements.txt
+pip install --upgrade pip
+pip install -r requirements.txt
 ```
 
 Pobranie z Github GroundedSAM
