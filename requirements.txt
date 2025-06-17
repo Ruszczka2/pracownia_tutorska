@@ -1,9 +1,11 @@
+--extra-index-url https://download.pytorch.org/whl/cu124
+
 numpy
 pandas
 opencv-python
-torch
-torchvision
-torchaudio
+torch==2.6.0+cu124
+torchvision==0.21.0+cu124
+torchaudio==2.6.0+cu124
 supervision
 transformers
 addict
@@ -12,4 +14,4 @@ timm
 pycocotools
 scikit-learn
 tqdm
-tensorflow[and-cuda]
+tensorflow==2.16.0

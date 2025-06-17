@@ -2,30 +2,37 @@
 
 --- opis ---
 
-## Przed instalacją
+## Instalacja CUDA 11.8
 
-Instalacja CUDA 11.8
+Przy linijce z `cuda-*-keyring.gpg` należy podmienić na kod, który ukaże się podczas instalacji wcześniej
 ```bash
 wget https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86_64/cuda-wsl-ubuntu.pin
 sudo mv cuda-wsl-ubuntu.pin /etc/apt/preferences.d/cuda-repository-pin-600
-wget https://developer.download.nvidia.com/compute/cuda/11.8.0/local_installers/cuda-repo-wsl-ubuntu-11-8-local_11.8.0-1_amd64.deb
-sudo dpkg -i cuda-repo-wsl-ubuntu-11-8-local_11.8.0-1_amd64.deb
-sudo cp /var/cuda-repo-wsl-ubuntu-11-8-local/cuda-*-keyring.gpg /usr/share/keyrings/
+wget https://developer.download.nvidia.com/compute/cuda/12.4.0/local_installers/cuda-repo-wsl-ubuntu-12-4-local_12.4.0-1_amd64.deb
+sudo dpkg -i cuda-repo-wsl-ubuntu-12-4-local_12.4.0-1_amd64.deb
+sudo cp /var/cuda-repo-wsl-ubuntu-12-4-local/cuda-*-keyring.gpg /usr/share/keyrings/
 sudo apt-get update
-sudo apt-get -y install cuda
+sudo apt-get -y install cuda-toolkit-12-4
 ```
 
-Ustawienie stałej ścieżki do folderu z CUDA
+Ustawienie ściezki do folderu CUDA
+```bash
+echo 'export PATH=/usr/local/cuda-12.4/bin:$PATH' >> ~/.bashrc
+echo 'export LD_LIBRARY_PATH=/usr/local/cuda-12.4/lib64:$LD_LIBRARY_PATH' >> ~/.bashrc
+source ~/.bashrc
+```
+
+<!-- Ustawienie stałej ścieżki do folderu z CUDA
 ```bash
 echo 'export CUDA_HOME=/ścieżka/do/cuda' >> ~/.bashrc
 ```
-przykładowo `echo 'export CUDA_HOME=/usr/local/cuda-11.8' >> ~/.bashrc`
+przykładowo `echo 'export CUDA_HOME=/usr/local/cuda-12.4' >> ~/.bashrc`
 
 Następnie należy sprawdzić czy CUDA_HOME jest ustawiona poprawnie
 ```bash
 source ~/.bashrc
 echo $CUDA_HOME
-```
+``` -->
 <!-- 
 Zainstalowanie odpowiedniej wersji pythona
 ```bash
