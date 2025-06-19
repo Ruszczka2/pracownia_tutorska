@@ -51,7 +51,7 @@ pyenv install 3.10.13
 pyenv local 3.10.13
 ``` -->
 
-## Instalacja
+## Instalacja GroundedSAM
 
 Pobranie repozytorium
 ```bash
@@ -119,21 +119,22 @@ Przykładowa komenda `touch /home/ruszczka/projekty/test_files/Grounded-SAM-2/gr
 ## Struktura projektu
 
 ```
-twoj-projekt/
-├── .venv/                 # Środowisko wirtualne (w .gitignore)
-├── .vscode/               # Folder z potrzebną konfiguracją VSCode 
-├── data2/                 # Folder z danymi
-├── img/                   # Folder z zdjęciami
-├──
-├──
-├── requirements.txt       # Lista zależności
-└── README.md              # Ten plik
+pracownia_tutorska/
+├── .venv/                         # Środowisko wirtualne (w .gitignore)
+├── .vscode/                       # Folder z potrzebną konfiguracją VSCode 
+├── data2/                         # Folder z danymi
+├── img/                           # Folder z zdjęciami
+├── outputs/                       # Folder przygotowany pod pliki wyjściowe
+├── .gitignore                     # Pliki do ignorowania przez Git
+├── first_GDSAM.ipynb              # Kod służący do korzystania z modelu GroundedSAM
+├── second_creating_dataset.ipynb  # Kod służący do utworzenia odpowiednego zbioru danych
+├── third_model.ipynb              # Kod służący do utowrzenia modelu i uczenia maszynowego
+├── model_tuned.keras              # Wytrenowany wcześniej model
+├── requirements.txt               # Lista potrzebnych pakietów
+└── README.md                      # Opis repozytorium
 ```
 
 ## To-DO
 
-- [ ] Uzupełnić opis
-- [ ] Uzupełnić strukturę projektu
-- [ ] Uzupełnić nagłówek *Przed instalacją*
-- [x] Sprawdzenie listy ToDo
-- [x] Upewnić się czy trzeba pobrać dodatkowo python 3.10 - stabilnie
+- [ ] Przetestować instalacje na nowym komputerze
+- [ ] Sprawdzić, czy działa bez instalacji CUDA
