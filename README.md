@@ -1,6 +1,17 @@
 # Pracownia Tutorska
 
---- opis ---
+Projekt ten obejmuje instalacje i konfiguracje środowiska pod uruchomienie modelu GroundedSAM.
+
+Kod składa się z trzech części:
+
+1. *first_GDSAM.ipynb* -- służy do korzystania z modelu GroundedSAM.
+2. *second_creating_dataset.ipynb* -- służy do utworzenia odpowiednego zbioru danych.
+3. *third_model.ipynb* -- tworzenie modelu i uczenie maszynowe.
+
+Testy przeprowadzone zostały na WSL 2:
+* system operacyjny -- Ubuntu 24.04
+* wersja Python -- 3.10
+* edytor kodu -- Visual Studio Code
 
 ## Instalacja CUDA 12.4
 
