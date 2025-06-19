@@ -113,8 +113,9 @@ przykładowo `echo "export PYTHONPATH=\$PYTHONPATH:/home/ruszczka/projekty/test_
 Dodanie pliku `__init__.py` do poprawnego działania
 ```bash
 touch /pełna/ścieżka/do/Grounded-SAM-2/grounding_dino/__init__.py
-``` -->
+``` 
 Przykładowa komenda `touch /home/ruszczka/projekty/test_files/Grounded-SAM-2/grounding_dino/__init__.py`
+-->
 
 ## Struktura projektu
 
@@ -134,7 +135,7 @@ pracownia_tutorska/
 └── README.md                      # Opis repozytorium
 ```
 
-## To-DO
+## TO-DO
 
 - [ ] Przetestować instalacje na nowym komputerze
 - [ ] Sprawdzić, czy działa bez instalacji CUDA
