@@ -59,6 +59,13 @@ git clone https://github.com/Ruszczka2/pracownia_tutorska.git
 cd pracownia_tutorska
 ```
 
+Pobranie python3.10 - Opcjonalne
+```bash
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt update
+sudo apt install python3.10 python3.10-venv python3.10-dev
+```
+
 Zainstalowanie środowiska wirtualnego
 ```bash
 python3.10 -m venv .venv
