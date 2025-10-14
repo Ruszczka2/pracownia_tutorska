@@ -1,0 +1,15 @@
+numpy
+pandas
+opencv-python
+torch==2.6.0
+torchvision==0.21.0
+torchaudio==2.6.0
+supervision
+transformers
+addict
+yapf
+timm
+pycocotools
+scikit-learn
+tqdm
+tensorflow==2.16.1

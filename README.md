@@ -1,6 +1,17 @@
 # Pracownia Tutorska
 
---- opis ---
+Projekt ten obejmuje instalacje i konfiguracje środowiska pod uruchomienie modelu GroundedSAM.
+
+Kod składa się z trzech części:
+
+1. *first_GDSAM.ipynb* -- służy do korzystania z modelu GroundedSAM.
+2. *second_creating_dataset.ipynb* -- służy do utworzenia odpowiednego zbioru danych.
+3. *third_model.ipynb* -- tworzenie modelu i uczenie maszynowe.
+
+Testy przeprowadzone zostały na WSL 2:
+* system operacyjny -- Ubuntu 24.04
+* wersja Python -- 3.10
+* edytor kodu -- Visual Studio Code
 
 ## Instalacja CUDA 12.4
 
@@ -40,14 +51,19 @@ pyenv install 3.10.13
 pyenv local 3.10.13
 ``` -->
 
-!! Sprawdzić czy nie trzeba pobrać python 3.10 przed !!
-
-## Instalacja
+## Instalacja GroundedSAM
 
 Pobranie repozytorium
 ```bash
 git clone https://github.com/Ruszczka2/pracownia_tutorska.git
 cd pracownia_tutorska
+```
+
+Pobranie python3.10 - Opcjonalne
+```bash
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt update
+sudo apt install python3.10 python3.10-venv python3.10-dev
 ```
 
 Zainstalowanie środowiska wirtualnego
@@ -58,8 +74,8 @@ source .venv/bin/activate
 
 Zainstalowanie potrzebnych pakietów
 ```bash
-pip3 install --upgrade pip
-pip3 install -r requirements.txt
+pip install --upgrade pip
+pip install -r requirements.txt
 ```
 
 Pobranie z Github GroundedSAM
@@ -104,27 +120,29 @@ przykładowo `echo "export PYTHONPATH=\$PYTHONPATH:/home/ruszczka/projekty/test_
 Dodanie pliku `__init__.py` do poprawnego działania
 ```bash
 touch /pełna/ścieżka/do/Grounded-SAM-2/grounding_dino/__init__.py
-``` -->
+``` 
 Przykładowa komenda `touch /home/ruszczka/projekty/test_files/Grounded-SAM-2/grounding_dino/__init__.py`
+-->
 
 ## Struktura projektu
 
 ```
-twoj-projekt/
-├── .venv/                 # Środowisko wirtualne (w .gitignore)
-├── .vscode/               # Folder z potrzebną konfiguracją VSCode 
-├── data2/                 # Folder z danymi
-├── img/                   # Folder z zdjęciami
-├──
-├──
-├── requirements.txt       # Lista zależności
-└── README.md              # Ten plik
+pracownia_tutorska/
+├── .venv/                         # Środowisko wirtualne (w .gitignore)
+├── .vscode/                       # Folder z potrzebną konfiguracją VSCode 
+├── data2/                         # Folder z danymi
+├── img/                           # Folder z zdjęciami
+├── outputs/                       # Folder przygotowany pod pliki wyjściowe
+├── .gitignore                     # Pliki do ignorowania przez Git
+├── first_GDSAM.ipynb              # Kod służący do korzystania z modelu GroundedSAM
+├── second_creating_dataset.ipynb  # Kod służący do utworzenia odpowiednego zbioru danych
+├── third_model.ipynb              # Kod służący do utowrzenia modelu i uczenia maszynowego
+├── model_tuned.keras              # Wytrenowany wcześniej model
+├── requirements.txt               # Lista potrzebnych pakietów
+└── README.md                      # Opis repozytorium
 ```
 
-## To-DO
+## TO-DO
 
-- [ ] Uzupełnić opis
-- [ ] Uzupełnić strukturę projektu
-- [ ] Uzupełnić nagłówek *Przed instalacją*
-- [x] Sprawdzenie listy ToDo
-- [x] Upewnić się czy trzeba pobrać dodatkowo python 3.10 - stabilnie
+- [ ] Przetestować instalacje na nowym komputerze
+- [ ] Sprawdzić, czy działa bez instalacji CUDA
