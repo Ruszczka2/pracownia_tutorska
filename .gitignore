@@ -4,3 +4,5 @@ outputs/*
 !outputs/.gitkeep
 !outputs/model/.gitkeep
 .env
+vision_finetune_images/
+plots_comparison/stare/
