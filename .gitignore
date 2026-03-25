@@ -9,3 +9,4 @@ plots_comparison/stare/
 test.py
 plots_comparison/bbox/comparison_bbox_[1-9][0-9].png
 openai_finetune*
+src/model/diff_pred_tuning
