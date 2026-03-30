@@ -7,6 +7,7 @@ outputs/*
 vision_finetune_images/
 plots_comparison/stare/
 test.py
+test.ipynb
 plots_comparison/bbox/comparison_bbox_[1-9][0-9].png
 openai_finetune*
 src/model/diff_pred_tuning
